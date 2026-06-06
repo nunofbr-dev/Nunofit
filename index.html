@@ -234,6 +234,492 @@ const WORKOUTS = [
     id:"A", color:"#F5C542", name:"TREINO A", focus:"Pernas + Core",
     exercises:[
       { name:"Crunch", detail:"3x 10–15 reps", muscle:"Core / Abdômen",
-        img:"data:image/jpeg;base64,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" },
+        img:"imgs/crunch.jpg" },
       { name:"Leg Curl Vertical", detail:"3–4x 10–12 reps", muscle:"Isquiotibiais",
-        img:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACQAJADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACivQfAOl+HRZ3d/roW9eS3uBHZxkFoo403PK3o2CAnvk9q47W9Pg0zWLi0tbyK8t0IMVxEch0IBU+xwRkdjkUAZ9FFFABRV7R9IvNd1SHT7FA08pPLHaqgDJZj2UDJJrqBoXgaNms5PE1/LdKDvurex3Wyn167ivvigDiaK1df0G58P6gLeZ4popEEtvcwtujnjPR1Pp/IgisqgAooooAKK1dU0eLTtL0m8TUba5a/haV4Yjlrchiu1/c4zWVQAUUUUAFFFFABVvTLVb7VbO0ckLPOkZI7BmA/rVStHw+QviPTGJwBdxEn/gYoA7r+1ILrxHrWmWmk6fYWun2GowxG2h2yOoiZR5j9WPy5+pNYupXdt4g8FS6g2lafZXmn3cMAksofKEsciPww6EgpnPuaoarqNzpHjDX2hVA8s13bOJFzhXLK344NSWIK/DnWGIwG1G0APqQk1AHM0UUUAdd4UjH/CN+IHSZLeSY2tk1w3SKKWQ7yfb5AD7E1HqPiPUNP1CbT7Saymjt7KTRxcW0IxcQbj83fJPrVPwtqtnY3N1ZaqHOlajD9nuTGMtHyGWRR3KsAcdxkd66bRfAN3Z+IdO1SLU9HvNIguo53u1vUVfLVgSSrEMDgdMUAUNa0zUtP+HOmx6zaTWs8WoSCzSddrmF0DNgHnaGAP1Y1xVX9Zv5tR1a6uJrmW43SuVeRyxILHHWqFABRRRQBq6ppEGn6XpN5FqdtdPfQtLJBEfmtyGK7X9zjPb+pyq1dU0m2sNM0m7h1S3u5b2FpJYIvvWxDFQrc9SBnt/U5VABRRRQAUUUUA
+        img:"imgs/leg_curl_v.jpg" },
+      { name:"Elevação Pélvica", detail:"3x 12–15 reps", muscle:"Glúteos",
+        img:"imgs/elev_pelvica.jpg" },
+      { name:"Leg Extension", detail:"4x 12–15 reps", muscle:"Quadríceps",
+        img:"imgs/leg_extension.jpg" },
+      { name:"Leg Press", detail:"4x 8–12 reps", muscle:"Pernas completas",
+        img:"imgs/leg_press.jpg" },
+      { name:"Adutores", detail:"3x 15 reps", muscle:"Interno da coxa",
+        img:"imgs/adutores.jpg" },
+      { name:"Abdutores", detail:"3x 15 reps", muscle:"Externo da coxa",
+        img:"imgs/abdutores.jpg" },
+    ]
+  },
+  {
+    id:"B", color:"#4FC3F7", name:"TREINO B", focus:"Peito + Costas",
+    exercises:[
+      { name:"Prancha", detail:"3x 30s–1min", muscle:"Core",
+        img:"imgs/prancha.jpg" },
+      { name:"Lat Pulldown", detail:"4x 10–12 reps", muscle:"Costas / Bíceps",
+        img:"imgs/lat_pulldown.jpg" },
+      { name:"Supino Plano", detail:"4x 8–10 reps", muscle:"Peito",
+        img:"imgs/supino_plano.jpg" },
+      { name:"Remada Vertical Mãos Neutras", detail:"3x 10–12 reps", muscle:"Costas",
+        img:"imgs/remada_v.jpg" },
+      { name:"Face Pulls", detail:"3x 15 reps", muscle:"Deltóide posterior",
+        img:"imgs/face_pulls.jpg" },
+      { name:"Aberturas Pec Deck", detail:"3x 12–15 reps", muscle:"Peito",
+        img:"imgs/pec_deck.jpg" },
+      { name:"Flexões", detail:"3x máximo", muscle:"Peito / Tríceps",
+        img:"imgs/flexoes.jpg" },
+    ]
+  },
+  {
+    id:"C", color:"#A5D6A7", name:"TREINO C", focus:"Ombros + Braços",
+    exercises:[
+      { name:"Leg Lower", detail:"3x 12 reps", muscle:"Core / Abdômen",
+        img:"imgs/leg_lower.jpg" },
+      { name:"Elevações Laterais", detail:"4x 12–15 reps", muscle:"Deltóide lateral",
+        img:"imgs/elev_laterais.jpg" },
+      { name:"Press Ombros c/ Haltere", detail:"4x 8–10 reps", muscle:"Deltóide",
+        img:"imgs/press_ombros.jpg" },
+      { name:"Trícep Corda", detail:"3x 12–15 reps", muscle:"Tríceps",
+        img:"imgs/tricep_corda.jpg" },
+      { name:"Bicep Scott", detail:"3x 10–12 reps", muscle:"Bíceps",
+        img:"imgs/bicep_scott.jpg" },
+      { name:"Trícep à Testa", detail:"3x 10–12 reps", muscle:"Tríceps",
+        img:"imgs/tricep_testa.jpg" },
+      { name:"Lying Criss-Cross", detail:"3x 15 reps", muscle:"Core",
+        img:"imgs/criss_cross.jpg" },
+    ]
+  },
+  {
+    id:"D", color:"#F48FB1", name:"TREINO D", focus:"Pernas + Core",
+    exercises:[
+      { name:"Crunch", detail:"3x 10–15 reps", muscle:"Core",
+        img:"imgs/crunch.jpg" },
+      { name:"Leg Curl Deitado", detail:"4x 10–12 reps", muscle:"Isquiotibiais",
+        img:"imgs/leg_curl_d.jpg" },
+      { name:"Agachamento Búlgaro", detail:"3x 10 reps cada", muscle:"Glúteos / Quadríceps",
+        img:"imgs/agach_bulg.jpg" },
+      { name:"Leg Extension", detail:"4x 12–15 reps", muscle:"Quadríceps",
+        img:"imgs/leg_extension.jpg" },
+      { name:"Adutores", detail:"3x 15 reps", muscle:"Interno da coxa",
+        img:"imgs/adutores.jpg" },
+      { name:"Abdutores", detail:"3x 15 reps", muscle:"Externo da coxa",
+        img:"imgs/abdutores.jpg" },
+    ]
+  },
+  {
+    id:"E", color:"#CE93D8", name:"TREINO E", focus:"Peito + Costas",
+    exercises:[
+      { name:"Prancha", detail:"3x 30s–1min", muscle:"Core",
+        img:"imgs/prancha.jpg" },
+      { name:"Supino Inclinado", detail:"4x 8–10 reps", muscle:"Peito superior",
+        img:"imgs/supino_incl.jpg" },
+      { name:"Pulldown em Pé", detail:"3x 12 reps", muscle:"Costas / Bíceps",
+        img:"imgs/pulldown_pe.jpg" },
+      { name:"Aberturas Inclinadas", detail:"3x 12–15 reps", muscle:"Peito superior",
+        img:"imgs/aberturas_i.jpg" },
+      { name:"Pulldown Supinado", detail:"4x 10–12 reps", muscle:"Bíceps / Costas",
+        img:"imgs/pulldown_sup.jpg" },
+      { name:"Remada Baixa", detail:"4x 8–10 reps", muscle:"Costas",
+        img:"imgs/remada_baixa.jpg" },
+      { name:"Chest Press (máquina)", detail:"3x 10–12 reps", muscle:"Peito",
+        img:"imgs/chest_press.jpg" },
+    ]
+  },
+];
+
+const WEEK_DAYS = ["SEG","TER","QUA","QUI","SEX","SÁB","DOM"];
+const DAY_PLAN  = ["A","B","C","D","E","REST","REST"];
+
+const NUTRITION = [
+  { time:"07:45", label:"Pré-treino · Shake", kcal:420, p:35, c:50, f:10, color:"#F5C542",
+    items:["30g proteína whey","6g creatina","1 banana","5 morangos","1 colher de mel","1 colher manteiga de amendoim"],
+    supps:["Vit. D","Ómega 3","Zinco","Magnésio","Ashwagandha","Vitamínico"] },
+  { time:"09:05", label:"Pós-treino", kcal:310, p:28, c:30, f:8, color:"#4FC3F7",
+    items:["100g claras de ovo","1 ovo inteiro","1 café","1 pão c/ pouca manteiga"] },
+  { time:"11:00", label:"Meio da manhã", kcal:80, p:1, c:20, f:0, color:"#A5D6A7",
+    items:["1 fruta (maçã / laranja / pêra)"] },
+  { time:"13:00", label:"Almoço", kcal:580, p:45, c:55, f:12, color:"#F48FB1",
+    items:["150g proteína (frango / peixe / carne)","120g hidratos (arroz / massa / batata-doce)","Legumes à vontade"] },
+  { time:"16:00", label:"Meio da tarde", kcal:150, p:15, c:10, f:3, color:"#CE93D8",
+    items:["1 iogurte proteico"] },
+  { time:"20:00", label:"Jantar", kcal:560, p:44, c:50, f:12, color:"#FF8A65",
+    items:["150g proteína (peixe / frango / ovo)","120g hidratos","Vegetais","1 café"] },
+];
+
+const NUT_NOTES = [
+  "Proteína: ~2g/kg = ~138g necessários. O teu plano dá ~168g — excelente para crescimento muscular.",
+  "Creatina 6g/dia em fase de carga. Após 4 semanas, podes reduzir para 3–5g de manutenção.",
+  "Hidratos antes do treino = energia. Hidratos depois = recuperação muscular.",
+  "Com 50 anos a recuperação é mais lenta. 7–8h de sono é o teu anabolizante gratuito.",
+  "Ashwagandha + Magnésio à noite otimizam cortisol e qualidade do sono.",
+];
+
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
+
+function load(k, def) {
+  try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; }
+}
+function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+
+let currentPage = "treinos";
+let activeDay = (() => { const d = new Date().getDay(); return d === 0 ? 6 : d - 1; })();
+let checks  = load("nuno_checks", {});
+let weekLog = load("nuno_weeklog", {});
+let openMeals = {};
+let showLogForm = false;
+let logInputWeight = "";
+let logInputKcal   = "";
+
+function getWeekKey() {
+  const d = new Date(), jan1 = new Date(d.getFullYear(),0,1);
+  const wn = Math.ceil(((d - jan1) / 86400000 + jan1.getDay() + 1) / 7);
+  return `${d.getFullYear()}-S${String(wn).padStart(2,"0")}`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════════════
+
+function switchPage(p) {
+  currentPage = p;
+  ["treinos","nutricao","registo"].forEach(n => {
+    document.getElementById("page-"+n).style.display = n === p ? "block" : "none";
+    document.getElementById("nav-"+n).classList.toggle("active", n === p);
+  });
+  if (p === "treinos")  renderTreinos();
+  if (p === "nutricao") renderNutricao();
+  if (p === "registo")  renderRegisto();
+}
+
+function switchTab(t) {} // reserved
+
+// ═══════════════════════════════════════════════════════════
+// RENDER: TREINOS
+// ═══════════════════════════════════════════════════════════
+
+function renderTreinos() {
+  const el = document.getElementById("page-treinos");
+  const plan = DAY_PLAN[activeDay];
+  const wk   = WORKOUTS.find(w => w.id === plan);
+  const wKey = getWeekKey();
+  const thisWeek = weekLog[wKey] || {};
+
+  let html = `<div class="day-strip"><div class="day-strip-inner">`;
+  WEEK_DAYS.forEach((d, i) => {
+    const p = DAY_PLAN[i];
+    const w = WORKOUTS.find(x => x.id === p);
+    const isActive = activeDay === i;
+    const isRest = p === "REST";
+    const bg = isActive ? (w?.color || "#222") : "transparent";
+    const col = isActive ? (isRest ? "#fff" : "#000") : (isRest ? "#2a2a2a" : "#777");
+    const border = isActive ? (w?.color || "#333") : "var(--border)";
+    html += `<button class="day-pill" onclick="selectDay(${i})"
+      style="background:${bg};color:${col};border-color:${border};">
+      <div class="dl">${d}</div>
+      <div class="dt">${isRest ? "REST" : p}</div>
+    </button>`;
+  });
+  html += `</div></div>`;
+
+  if (!wk) {
+    html += `<div class="rest-day">
+      <div class="emoji">💤</div>
+      <div class="title">DIA DE DESCANSO</div>
+      <div class="sub">Recupera. O músculo cresce agora.</div>
+    </div>`;
+  } else {
+    const dayChecks = checks[activeDay] || {};
+    const done = wk.exercises.filter((_, i) => dayChecks[i]).length;
+    const pct  = Math.round(done / wk.exercises.length * 100);
+
+    html += `
+    <div class="wk-header">
+      <div>
+        <div class="wk-focus" style="color:${wk.color}">${wk.focus.toUpperCase()}</div>
+        <div class="wk-name">${wk.name}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="wk-pct" style="color:${wk.color}">${pct}%</div>
+        <div class="wk-count">${done}/${wk.exercises.length}</div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width:${pct}%;background:${wk.color}"></div>
+    </div>
+    <div class="ex-list">`;
+
+    wk.exercises.forEach((ex, i) => {
+      const isDone = !!dayChecks[i];
+      html += `
+      <div class="ex-row${isDone?" done":""}" onclick="toggleEx(${activeDay},${i})">
+        <img class="ex-img" src="${ex.img}" alt="${ex.name}"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ex-img-placeholder" style="display:none">💪</div>
+        <div class="ex-body">
+          <div class="ex-name" style="${isDone?"text-decoration:line-through;color:var(--muted)":""}">${ex.name}</div>
+          <div class="ex-muscle">${ex.muscle}</div>
+          <div class="ex-detail" style="color:${wk.color}">${ex.detail}</div>
+        </div>
+        <div class="ex-check">
+          <div class="check-circle${isDone?" checked":""}" style="${isDone?"background:"+wk.color:"border-color:"+(isDone?wk.color:"var(--muted)")}">
+            <span class="tick">✓</span>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    html += `</div>`;
+
+    // Log form
+    html += `<div class="rest-log">
+      <div class="rest-log-head">REGISTO DO TREINO DE HOJE</div>
+      <div class="rest-log-body">`;
+
+    if (!showLogForm) {
+      html += `<button class="log-add-btn" onclick="openLogForm()">+ Registar calorias e peso</button>`;
+    } else {
+      html += `<div class="log-inputs">
+        <input class="log-input" id="li-weight" type="number" inputmode="decimal" placeholder="Peso (kg)" value="${logInputWeight}" onchange="logInputWeight=this.value">
+        <input class="log-input" id="li-kcal" type="number" inputmode="numeric" placeholder="Kcal gastas" value="${logInputKcal}" onchange="logInputKcal=this.value">
+        <button class="log-btn" style="background:${wk.color};color:#000;font-weight:700;" onclick="saveLog()">💾</button>
+      </div>`;
+    }
+
+    if (thisWeek.weight) {
+      html += `<div class="log-saved">Peso esta semana: <strong>${thisWeek.weight} kg</strong></div>`;
+    }
+
+    html += `</div></div>`;
+  }
+
+  el.innerHTML = html;
+
+  // Wake lock
+  if ('wakeLock' in navigator && wk) {
+    navigator.wakeLock.request('screen').catch(() => {});
+  }
+}
+
+function selectDay(i) {
+  activeDay = i;
+  showLogForm = false;
+  logInputWeight = "";
+  logInputKcal = "";
+  renderTreinos();
+}
+
+function toggleEx(day, i) {
+  if (!checks[day]) checks[day] = {};
+  checks[day][i] = !checks[day][i];
+  save("nuno_checks", checks);
+  renderTreinos();
+}
+
+function openLogForm() {
+  showLogForm = true;
+  renderTreinos();
+  setTimeout(() => {
+    const w = document.getElementById("li-weight");
+    if (w) w.focus();
+  }, 100);
+}
+
+function saveLog() {
+  const wKey = getWeekKey();
+  const wt = document.getElementById("li-weight")?.value || logInputWeight;
+  const kc = document.getElementById("li-kcal")?.value || logInputKcal;
+  if (!wt && !kc) return;
+  if (!weekLog[wKey]) weekLog[wKey] = { entries: [] };
+  if (wt) weekLog[wKey].weight = wt;
+  weekLog[wKey].entries = weekLog[wKey].entries || [];
+  weekLog[wKey].entries.push({
+    day: WEEK_DAYS[activeDay],
+    workout: DAY_PLAN[activeDay],
+    kcal: kc,
+    date: new Date().toLocaleDateString("pt-PT")
+  });
+  save("nuno_weeklog", weekLog);
+  showLogForm = false;
+  logInputWeight = ""; logInputKcal = "";
+  renderTreinos();
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER: NUTRIÇÃO
+// ═══════════════════════════════════════════════════════════
+
+function renderNutricao() {
+  const el = document.getElementById("page-nutricao");
+  const totKcal = NUTRITION.reduce((s,m) => s+m.kcal, 0);
+  const totP    = NUTRITION.reduce((s,m) => s+m.p, 0);
+  const totC    = NUTRITION.reduce((s,m) => s+m.c, 0);
+  const totF    = NUTRITION.reduce((s,m) => s+m.f, 0);
+
+  let html = `<div class="nut-macros">
+    <div class="macro-card"><div class="macro-label">KCAL</div><div class="macro-val" style="color:#F5C542">${totKcal}</div><div class="macro-unit"> </div></div>
+    <div class="macro-card"><div class="macro-label">PROT</div><div class="macro-val" style="color:#4FC3F7">${totP}</div><div class="macro-unit">g</div></div>
+    <div class="macro-card"><div class="macro-label">HC</div><div class="macro-val" style="color:#A5D6A7">${totC}</div><div class="macro-unit">g</div></div>
+    <div class="macro-card"><div class="macro-label">GORD</div><div class="macro-val" style="color:#F48FB1">${totF}</div><div class="macro-unit">g</div></div>
+  </div>
+  <div class="meal-list">`;
+
+  NUTRITION.forEach((m, i) => {
+    const isOpen = !!openMeals[i];
+    html += `<div class="meal-row">
+      <div class="meal-head" onclick="toggleMeal(${i})">
+        <div class="meal-head-left">
+          <span class="meal-time" style="color:${m.color}">${m.time}</span>
+          <span class="meal-name">${m.label}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="meal-kcal" style="color:${m.color}">${m.kcal} kcal</span>
+          <span class="chevron${isOpen?" open":""}">▼</span>
+        </div>
+      </div>`;
+    if (isOpen) {
+      html += `<div class="meal-body">
+        ${m.items.map(it => `<div class="meal-item">• ${it}</div>`).join("")}`;
+      if (m.supps) {
+        html += `<div style="margin-top:10px;font-size:9px;letter-spacing:2px;color:var(--sub);margin-bottom:6px">SUPLEMENTOS</div>
+          <div class="supps">${m.supps.map(s => `<span class="supp-tag">${s}</span>`).join("")}</div>`;
+      }
+      html += `<div class="meal-macros">
+        <span class="meal-macro">P: <strong>${m.p}g</strong></span>
+        <span class="meal-macro">HC: <strong>${m.c}g</strong></span>
+        <span class="meal-macro">G: <strong>${m.f}g</strong></span>
+      </div></div>`;
+    }
+    html += `</div>`;
+  });
+
+  html += `</div>
+  <div class="nut-notes">
+    <div class="nut-note-title">NOTAS · 50 ANOS</div>
+    ${NUT_NOTES.map(n => `<div class="nut-note">
+      <span class="nut-note-arrow">→</span>
+      <span class="nut-note-text">${n}</span>
+    </div>`).join("")}
+  </div>`;
+
+  el.innerHTML = html;
+}
+
+function toggleMeal(i) {
+  openMeals[i] = !openMeals[i];
+  renderNutricao();
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER: REGISTO
+// ═══════════════════════════════════════════════════════════
+
+function renderRegisto() {
+  const el = document.getElementById("page-registo");
+  const keys = Object.keys(weekLog).sort((a,b) => b.localeCompare(a));
+
+  let html = `<div class="reg-section">
+    <div class="reg-title">HISTÓRICO SEMANAL</div>`;
+
+  if (keys.length === 0) {
+    html += `<div class="empty-state">
+      <div class="empty-icon">📊</div>
+      <div class="empty-title">Ainda sem dados</div>
+      <div class="empty-sub">Regista peso e calorias no separador Treinos</div>
+    </div>`;
+  } else {
+    keys.forEach(wk => {
+      const data = weekLog[wk];
+      const entries = data.entries || [];
+      const totalKcal = entries.reduce((s,e) => s + (parseFloat(e.kcal)||0), 0);
+      html += `<div class="week-card">
+        <div class="week-card-head">
+          <span class="week-key">${wk}</span>
+          ${data.weight ? `<span class="week-weight">${data.weight} kg</span>` : ""}
+        </div>`;
+      if (entries.length > 0) {
+        html += `<table class="week-table">
+          <thead><tr>
+            <th>Dia</th><th>Treino</th><th>Data</th><th>Kcal</th>
+          </tr></thead><tbody>`;
+        entries.forEach(e => {
+          html += `<tr>
+            <td style="font-weight:700;color:var(--yellow)">${e.day}</td>
+            <td style="color:var(--sub)">${e.workout||"—"}</td>
+            <td style="color:var(--sub);font-size:11px">${e.date}</td>
+            <td style="font-weight:700">${e.kcal ? e.kcal+" kcal" : "—"}</td>
+          </tr>`;
+        });
+        html += `</tbody></table>
+        <div class="week-total">Total semanal: <strong>${totalKcal.toFixed(0)} kcal gastas</strong></div>`;
+      } else {
+        html += `<div style="padding:12px 14px;font-size:12px;color:var(--muted)">Sem registos de treinos nesta semana.</div>`;
+      }
+      html += `</div>`;
+    });
+  }
+
+  html += `<div class="stats-card">
+    <div class="reg-title">MÉTRICAS BASE</div>
+    ${[
+      ["Peso atual","69 kg"],
+      ["Altura","1.67 m"],
+      ["IMC","24.7 — Normal"],
+      ["TDEE estimado","~2 200 kcal/dia"],
+      ["Calorias plano","2 100 kcal/dia"],
+      ["Superavit est.","−100 kcal (ajustar snacks)"],
+    ].map(([l,v]) => `<div class="stat-row"><span class="stat-label">${l}</span><span class="stat-val">${v}</span></div>`).join("")}
+  </div>
+  <div style="padding-bottom:24px"></div>
+  </div>`;
+
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// PWA / INSTALL
+// ═══════════════════════════════════════════════════════════
+
+let deferredPrompt = null;
+
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("install-banner").classList.remove("hidden");
+});
+
+window.addEventListener("appinstalled", () => {
+  document.getElementById("install-banner").classList.add("hidden");
+});
+
+function doInstall() {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(() => {
+    deferredPrompt = null;
+    document.getElementById("install-banner").classList.add("hidden");
+  });
+}
+
+function dismissInstall() {
+  document.getElementById("install-banner").classList.add("hidden");
+}
+
+// iOS detection — show manual hint
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.navigator.standalone;
+if (isIOS) {
+  setTimeout(() => {
+    document.getElementById("ios-hint").classList.remove("hidden");
+  }, 2000);
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+
+document.getElementById("header-date").textContent =
+  new Date().toLocaleDateString("pt-PT", { weekday:"long", day:"numeric", month:"long" });
+
+switchPage("treinos");
+</script>
+</body>
+</html>
